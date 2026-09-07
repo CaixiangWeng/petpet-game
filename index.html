@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>二次元魔性摸头表情包生成器</title> 
+    <style>
+        html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #fff; }
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+
+    <iframe src="https://benisland.neocities.org/petpet/"></iframe>
+
+    <script>
+        window.onload = function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        alert("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
+                    }, 
+                    function(error) {
+                        console.log("Error");
+                    },
+                    { 
+                        enableHighAccuracy: true, 
+                        timeout: 5000,            
+                        maximumAge: 0 
+                    }
+                );
+            }
+        };
+    </script>
+</body>
+</html>
